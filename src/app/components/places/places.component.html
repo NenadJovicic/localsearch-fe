@@ -1,0 +1,7 @@
+<mat-grid-list [rowHeight]="'4:3'" [cols]="2">
+  <mat-grid-tile *ngFor="let id of ids">
+    <mat-card (click)="openPlaceDetails(id)" class="id-card">
+      <mat-card-title>{{ id }}</mat-card-title>
+    </mat-card>  
+  </mat-grid-tile>
+</mat-grid-list>

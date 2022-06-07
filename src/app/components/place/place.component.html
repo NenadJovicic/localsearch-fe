@@ -1,0 +1,23 @@
+<mat-card *ngIf="place" class="place-card">
+	<mat-card-title>
+		{{ place.name }}
+	</mat-card-title>
+	<mat-card-content>
+		<h2>
+			Address: <span class="address">{{ place.address }}</span>
+		</h2>
+		<p>
+			<mat-list>
+				<mat-list-item *ngFor="let workingHour of groupedWorkingHours">
+					<div class="working-hours-grid"> 
+						{{ workingHour.days }}
+					</div>
+					<div class="working-hours-grid">
+						<b>{{ workingHour.workingHours }}</b>	
+					</div>
+				</mat-list-item>
+			</mat-list>
+	
+		</p>
+	</mat-card-content>
+</mat-card>
